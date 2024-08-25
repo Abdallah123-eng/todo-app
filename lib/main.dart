@@ -1,4 +1,6 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:todo_app/home.dart';
 
 void main()
 {
@@ -12,6 +14,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder( );
+    return MaterialApp(
+      initialRoute: HomeScreen.routename,
+      routes:
+      {
+        HomeScreen.routename:(context)=> HomeScreen(),
+      },
+      debugShowCheckedModeBanner: false,
+    );
   }
 }
